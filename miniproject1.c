@@ -1,0 +1,69 @@
+# include <stdio.h>
+int main(){
+    int LemonRice=100, VegBiriyani=250,Kazzu=100,Panneer=40,Chickencurry=120,MuttonBiriyani=350,Chickenbiryani=300,Francecurry=90,option1,count=0;
+    float sgst=0.09,cgst=0.09,finalprice;
+    char option2;
+    printf("Welcome to PrimeNest Restuarent:\n");
+    do{
+        printf("<--- Welcome Veg Iteams --->\n");
+        printf("1.Lemon Rice=100\n2. Veg Biriyani=250\n3.Kazzu=150\n4.Panneer=80\n");
+        printf("enter the choice:");
+        scanf("%d",&option1);
+        switch(option1)
+        {
+            case 1:
+            printf("your orders Lemon Rice:%d\n",LemonRice);
+            count=count+LemonRice;
+            break;
+            case 2:
+            printf("your orders Veg Biriyani:%d\n",VegBiriyani);
+            count=count+VegBiriyani;
+            break;
+            case 3:
+            printf("your orders Kazzu:%d\n",Kazzu);
+            count=count+Kazzu;
+            break;
+            case 4:
+            printf("your orders Paneer:%d\n",Panneer);
+            count=count+Panneer;
+            break;
+            case 5:
+            printf("exit");
+            break;      
+        }   
+    }while(option1<6);
+    do{
+        printf("<--- Welcome NonVeg Iteams --->\n");
+        printf("1.Chickencurry=120\n2. MuttonBiriyani=350\n3.Chickenbiryani=300\n4.Francecurry=90\n");
+        printf("enter the choice:");
+        scanf("%c",&option2);
+        switch(option2)
+        {
+            case 'A':
+            printf("your orders Chickencurry:%d\n",Chickencurry);
+            count=count+Chickencurry;
+            break;
+            case 'B':
+            printf("your orders MuttonBiriyani:%d\n",MuttonBiriyani);
+            count=count+MuttonBiriyani;
+            break;
+            case 'C':
+            printf("your orders Chickenbiryani:%d\n",Chickenbiryani);
+            count=count+Chickenbiryani;
+            break;
+            case 'D':
+            printf("your orders Paneer:%d\n",Francecurry);
+            count=count+Francecurry;
+            break;
+            case 'E':
+            printf("exit");
+            break;      
+        }   
+    }while(option2<'F');
+    sgst = count*(0.09);
+    cgst = count*(0.09);
+    finalprice = count+sgst+cgst;
+    printf("Yours Finall Bill Amount:%d+sgst:%f+cgst:%f = %f\n",count,sgst,cgst,finalprice);
+    printf("Thankyou visit Again\n");
+    return 0;    
+}
